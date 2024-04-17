@@ -29,7 +29,7 @@ const Dropdown = () => {
 
             {
                 open && <div>
-                    <ul ref={menuRef} className='p-8 bg-white mt-2 rounded-xl shadow-xl'>
+                    <ul ref={menuRef} className='p-8 bg-white mt-2 rounded-xl shadow-xl transition-all duration-500'>
                         {menus.map(menu => (
                             <li key={menu} className='text-xl hover:bg-blue-300 py-2 px-4 rounded-xl cursor-pointer font-semibold text-center pt-2'>{menu}</li>
                         ))}
