@@ -2,7 +2,7 @@ import React from 'react';
 
 const AnimatedButton = () => {
     return (
-        <div>
+        <div className='h-screen bg-red-200'>
             
         </div>
     );

@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Dropdown from './Components/Dropdown'
 import Switch from './Components/Switch'
+import AnimatedButton from './Components/AnimatedButton'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <Dropdown></Dropdown>
       <Switch></Switch>
+      <AnimatedButton></AnimatedButton>
     </>
   )
 }
