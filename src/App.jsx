@@ -6,6 +6,7 @@ import Dropdown from './Components/Dropdown'
 import Switch from './Components/Switch'
 import AnimatedButton from './Components/AnimatedButton'
 import Card from './Components/Card'
+import Slider from './Components/Slider'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Switch></Switch>
       <AnimatedButton></AnimatedButton>
       <Card></Card>
+      <Slider></Slider>
     </>
   )
 }
