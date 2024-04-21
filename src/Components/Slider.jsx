@@ -18,6 +18,10 @@ const Slider = () => {
         setCurrentSlider((prev) => (prev === 0 ? images.length - 1 : prev - 1));
     };
 
+    const goToSlide = (index) => {
+        setCurrentSlider(index);
+    };
+
     return (
         <div className='h-screen flex justify-center items-center bg-blue-200 relative'>
             <div className='w-[40%] relative'>
@@ -30,7 +34,7 @@ const Slider = () => {
                 <div className="flex overflow-hidden relative rounded-xl shadow-lg">
                     <div className="w-full flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlider * 100}%)` }}>
                         {images.map((image, index) => (
-                            <img key={index} src={image} className="w-full" />
+                            <img key={index} src={image} className="w-full" alt={`Slide ${index + 1}`} />
                         ))}
                     </div>
                 </div>
@@ -40,6 +44,15 @@ const Slider = () => {
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded z-10">
                     <MdKeyboardArrowRight className='text-3xl' />
                 </button>
+
+                <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-4">
+                    {images.map((_, index) => (
+                        <button 
+                            key={index} 
+                            onClick={() => goToSlide(index)} 
+                            className={`mx-1 w-4 h-4 rounded-full ${currentSlider === index ? 'bg-blue-500' : 'bg-gray-600'}`} />
+                    ))}
+                </div>
             </div>
         </div>
     );
